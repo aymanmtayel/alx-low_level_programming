@@ -1,0 +1,21 @@
+#include <stdio.h>
+/**
+ *main - print all single digit numbers of base 10
+ *starting from 0
+ *
+ *Return: always 0
+ */
+int main(void)
+{
+int n;
+char l;
+for (n = 0; n < 10; n++)
+{
+putchar(n);
+}
+ for (l = 'a'; l <= 'f' ; l++)
+{
+putchar(l);
+ }
+return (0);
+ }
