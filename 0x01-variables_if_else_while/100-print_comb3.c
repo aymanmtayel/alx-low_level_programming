@@ -27,10 +27,10 @@ int main(void)
 				putchar(44);
 				putchar(32);
 			}
-			j++;
+			b++;
 		}
 
-		i++;
+		a++;
 	}
 
 	putchar(10);
