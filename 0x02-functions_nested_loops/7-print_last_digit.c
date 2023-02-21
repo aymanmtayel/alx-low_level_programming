@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_last_digit - print the last difit
+ *@z: is the digit to be tested
+ * Return: the last digit.
  */
 
 int print_last_digit(int z)
