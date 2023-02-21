@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+int print_last_digit(int z)
+{
+  int l;
+  if (z < 0 )
+    {
+      l = (z*-1) % 10;
+    }
+  
+  _putchar((z % 10) + '0');
+  return (l);
+}
