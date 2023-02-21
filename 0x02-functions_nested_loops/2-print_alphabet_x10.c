@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ *print_alphabet_x10 - print the alphabet in lower case
+ *10 times
+ *Return - void
+ */
 
 char l;
 int i=0;
