@@ -5,15 +5,17 @@
  *Return - void
  */
 
-char l;
-int i=0;
 void print_alphabet_x10(void)
 {
-while (i<10){
-for (l='a';l<='z';l++){
-  _putchar(l);
- }
+int i = 0;
+char l;
+while (i < 10)
+{
+for (l = 'a'; l <= 'z'; l++)
+{
+_putchar(l);
+}
 _putchar('\n');
- i++;
-  }
+i++;
+}
 }
