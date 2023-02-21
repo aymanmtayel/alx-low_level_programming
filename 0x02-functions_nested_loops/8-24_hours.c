@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * jack_bauer - print out all day hours
  *
- * Return: Always 0.
+ * Return: void
  */
 void jack_bauer(void)
 {
