@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+void times_table(void)
+{
+  int a,b;
+  for (a=0;a<11;a++)
+    {    _putchar(a+'0');
+    }for (b=0;b<11;b++)
+       { _putchar(b+'0');
+       }
+}
