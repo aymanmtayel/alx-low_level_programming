@@ -16,7 +16,7 @@ if (n > 0)
 {
 while (i < n)
 {
-for (k=0;k<i;k++)
+for (k = 0; k < i; k++)
 {
 _putchar(32);
 }
