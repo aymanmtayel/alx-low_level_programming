@@ -13,7 +13,7 @@ int k = 0;
 
 while (k < n)
 {
-_putchar(45);
+_putchar('_');
 k++;
 }
 _putchar('\n');
