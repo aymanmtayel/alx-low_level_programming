@@ -8,23 +8,30 @@
 
 void more_numbers(void)
 {
-int k = 0;
-int i;
-while (k < 11)
+int a, b, c, d;
+
+b = '0';
+c = 0;
+d = '9';
+
+for (a = 0; a < 10; a++)
 {
-for (i = 48; i <= 62; i++)
+while (c < 2)
 {
-if (i >= 58)
+while (b <= d)
 {
-_putchar(49);
-_putchar(i - 10);
+if (d == '4')
+_putchar('1');
+_putchar(b);
+b++;
 }
-else
-{
-_putchar(i);
-}
+c++;
+d = '4';
+b = '0';
 }
 _putchar('\n');
-k++;
+c = 0;
+b = '0';
+d = '9';
 }
 }
