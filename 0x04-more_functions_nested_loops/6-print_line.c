@@ -10,7 +10,7 @@
 void print_line(int n)
 {
 int k = 0;
- 
+
 while (k < n)
 {
 _putchar(45);
