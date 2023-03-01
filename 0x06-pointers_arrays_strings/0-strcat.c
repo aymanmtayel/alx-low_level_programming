@@ -2,8 +2,18 @@
 
 char *_strcat(char *dest, char *src)
 {
-  _putchar(*dest);
-  _putchar(*src);
-  _putchar('\n');
-  return 0;
+int l,i;
+
+l=0;
+while (dest[l] != '\0')
+{
+l++;
+}
+for (i = 0; src[i] != '\0';i++)
+{
+dest[l] = src[i];
+l++;
+}
+dest[l] = '\0';
+return (dest);
 }
