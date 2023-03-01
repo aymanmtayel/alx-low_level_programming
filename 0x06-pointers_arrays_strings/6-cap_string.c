@@ -20,4 +20,5 @@ s[i + 1] = s[i + 1] - 32;
 i++;
 }
 return (s);
+_putchar('\n');
 }
