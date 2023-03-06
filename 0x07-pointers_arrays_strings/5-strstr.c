@@ -28,7 +28,7 @@ if (j == 0)
 {
 s = i;
 }
-if (j == nlen - 1)
+if (j == l - 1)
 {
 return (haystack + s);
 }
