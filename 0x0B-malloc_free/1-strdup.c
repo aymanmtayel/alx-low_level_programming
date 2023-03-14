@@ -18,7 +18,7 @@ char *copy;
 if (str != NULL)
 size = strlen(str);
 
-copy = malloc(size * (sizeof(char) + 1));
+copy = malloc(size * (sizeof(char)) + 1);
 
 if (str == NULL || copy == NULL)
 return (NULL);
