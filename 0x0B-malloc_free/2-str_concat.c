@@ -27,7 +27,7 @@ j++;
 s = malloc(i * (sizeof(*s1)) + j * (sizeof(*s2)));
 if (s == 0)
 return (NULL);
-for (k = 0, l = 0; k < i; k++)
+for (k = 0, l = 0; k < i + j; k++)
 {
 if (k < i)
 s[k] = s1[k];
