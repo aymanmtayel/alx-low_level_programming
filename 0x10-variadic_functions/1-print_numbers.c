@@ -28,6 +28,6 @@ else
 printf("%i", va_arg(ap, int));
 }
 printf("\n");
+va_end(ap);
 }
-
 }
