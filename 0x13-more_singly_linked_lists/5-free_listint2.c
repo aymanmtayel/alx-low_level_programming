@@ -13,6 +13,8 @@ void free_listint2(listint_t **head)
 	listint_t *next;
 
 	current = *head;
+	if (current == NULL)
+		return;
 
 	while (current != NULL)
 	{
