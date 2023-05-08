@@ -87,5 +87,5 @@ int main(int argc, char *argv[])
 	print_elf_header(&ehdr);
 
 	close(fd);
-	return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }
