@@ -7,6 +7,7 @@
 void print_error(const char *msg)
 {
 	fprintf(stderr, "Error: %s\n", msg);
+	exit(98);
 }
 
 /**
@@ -52,14 +53,12 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		print_error("Usage: elf_header elf_filename");
-		return (EXIT_FAILURE);
 	}
 
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		print_error("Failed to open file");
-		return (EXIT_FAILURE);
 	}
 
 	n = read(fd, &ehdr, sizeof(ehdr));
@@ -67,13 +66,11 @@ int main(int argc, char *argv[])
 	{
 		print_error("Failed to read ELF header");
 		close(fd);
-		return (EXIT_FAILURE);
 	}
 	if (n != sizeof(ehdr))
 	{
 		print_error("Incomplete ELF header");
 		close(fd);
-		return (EXIT_FAILURE);
 	}
 
 	if (ehdr.e_ident[EI_MAG0] != ELFMAG0 || ehdr.e_ident[EI_MAG1] != ELFMAG1 ||
@@ -81,7 +78,6 @@ int main(int argc, char *argv[])
 	{
 		print_error("Not an ELF file");
 		close(fd);
-		return (EXIT_FAILURE);
 	}
 
 	print_elf_header(&ehdr);
