@@ -113,17 +113,20 @@ void print_header(const char *filename, char *buf)
 	printf("  Version: ");
 	printf("%d%s\n", buf[6], buf[6] == 1 ? " (current)" : "");
 	printf("  OS/ABI:  ");
-	if (buf[7] == 0)
+	switch (buf[7])
 	{
-		printf("UNIX - System V\n");
-	}
-	else if (buf[7] == 3)
-	{
-		printf("Linux\n");
-	}
-	else
-	{
-		printf("Other\n");
+		case 0:
+			printf("UNIX - System V\n");
+			break;
+		case 3:
+				printf("Linux\n");
+				break;
+		case 7:
+				printf("UNIX - NetBSD\n");
+				break;
+		default:
+				printf("Other\n");
+				break;
 	}
 	printf("  ABI Version: ");
 	printf("%d\n", buf[8]);
