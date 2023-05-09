@@ -43,7 +43,12 @@ int main(int argc, char *argv[])
 		print_error("Cannot read file", argv[1]);
 	}
 	print_header(argv[1], buf);
-	close(fd);
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(98);
+	}
+	else close(fd);
 	return (0);
 }
 
