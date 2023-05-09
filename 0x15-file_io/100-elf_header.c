@@ -113,10 +113,14 @@ void print_header(const char *filename, char *buf)
 	printf("  Version:                           ");
 	printf("%d%s\n", buf[6], buf[6] == 1 ? " (current)" : "");
 	printf("  OS/ABI:                            ");
+	
 	switch (buf[7])
 	{
 		case 0:
 			printf("UNIX - System V\n");
+			break;
+		case 2:
+			printf("UNIX - NetBSD\n");
 			break;
 		case 3:
 			printf("Linux\n");
