@@ -95,7 +95,7 @@ void print_header(const char *filename, char *buf)
 	}
 	else
 	{
-		printf("Invalid class\n");
+		print_error("Invalid class", filename);
 	}
 	printf("  Data:                              ");
 	if (buf[5] == 1)
@@ -108,7 +108,7 @@ void print_header(const char *filename, char *buf)
 	}
 	else
 	{
-		printf("Invalid data encoding\n");
+		print_error("Invalid data encoding", filename);
 	}
 	printf("  Version:                           ");
 	printf("%d%s\n", buf[6], buf[6] == 1 ? " (current)" : "");
