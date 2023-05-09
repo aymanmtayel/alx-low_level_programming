@@ -77,7 +77,7 @@ void print_header(const char *filename, char *buf)
 	{
 		print_error("File format not recognized", filename);
 	}
-	printf("ELF Header:\n");
+	printf("ELF Header: \n");
 	printf("  Magic:   ");
 	for (i = 0; i < 16; i++)
 	{
@@ -113,7 +113,7 @@ void print_header(const char *filename, char *buf)
 	printf("  Version:                           ");
 	printf("%d%s\n", buf[6], buf[6] == 1 ? " (current)" : "");
 	printf("  OS/ABI:                            ");
-	
+
 	switch (buf[7])
 	{
 		case 0:
