@@ -84,7 +84,7 @@ void print_header(const char *filename, char *buf)
 		printf("%02x ", (unsigned char)buf[i]);
 	}
 	printf("\n");
-	printf("  Class:   ");
+	printf("  Class:                             ");
 	if (buf[4] == 1)
 	{
 		printf("ELF32\n");
@@ -97,7 +97,7 @@ void print_header(const char *filename, char *buf)
 	{
 		printf("Invalid class\n");
 	}
-	printf("  Data:    ");
+	printf("  Data:                              ");
 	if (buf[5] == 1)
 	{
 		printf("2's complement, little endian\n");
@@ -110,27 +110,27 @@ void print_header(const char *filename, char *buf)
 	{
 		printf("Invalid data encoding\n");
 	}
-	printf("  Version: ");
+	printf("  Version:                           ");
 	printf("%d%s\n", buf[6], buf[6] == 1 ? " (current)" : "");
-	printf("  OS/ABI:  ");
+	printf("  OS/ABI:                            ");
 	switch (buf[7])
 	{
 		case 0:
 			printf("UNIX - System V\n");
 			break;
 		case 3:
-				printf("Linux\n");
-				break;
+			printf("Linux\n");
+			break;
 		case 7:
-				printf("UNIX - NetBSD\n");
-				break;
+			printf("UNIX - NetBSD\n");
+			break;
 		default:
-				printf("Other\n");
-				break;
+			printf("Other\n");
+			break;
 	}
-	printf("  ABI Version: ");
+	printf("  ABI Version:                       ");
 	printf("%d\n", buf[8]);
-	printf("  Type:    ");
+	printf("  Type:                              ");
 	if (buf[16] == 1)
 	{
 		printf("REL (Relocatable file)\n");
@@ -156,6 +156,6 @@ void print_header(const char *filename, char *buf)
 		u32 = *(uint32_t *)(buf + 24);
 		u64 = (uint64_t)u32;
 	}
-	printf("  Entry point address: ");
+	printf("  Entry point address:               ");
 	printf("0x%" PRIx64 "\n", u64);
 }
