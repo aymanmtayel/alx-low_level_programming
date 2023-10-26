@@ -1,5 +1,6 @@
 #include "main.h"
-#include <string.h>
+
+
 /**
  *check - function to check is same length and characters
  *@str: string to be checked
@@ -14,6 +15,23 @@ int check(char *str, int l, int n)
 		return (1);
 	if (str[l] == str[n])
 		return (check(str, l - 1, n + 1));
+	return (0);
+}
+
+
+/**
+ *_strlen_recursion - function to determine the length of a string
+ *@s: string
+ *Return: length of the string
+ */
+
+int _strlen_recursion(char *s)
+{
+
+	if (*(s) != '\0')
+	{
+		return (1 + _strlen_recursion(s + 1));
+	}
 	return (0);
 }
 
