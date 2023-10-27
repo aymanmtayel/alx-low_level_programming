@@ -2,6 +2,8 @@
 #define M_H
 
 #include <stdio.h>
+#include <stdlib.h>
+
 int _isdigit(int c);
 
 #endif
