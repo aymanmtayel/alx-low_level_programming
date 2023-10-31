@@ -8,9 +8,9 @@
 
 int size(char *argsv)
 {
-	int size;
+	int size = 0;
 
-	for (size = 0; argsv[size] != '\0'; size++)
+	for (; argsv[size] != '\0'; size++)
 		;
 	return (size);
 }
@@ -42,6 +42,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0 ; av[i][j] != '\0'; j++, counter++)
 			temp[counter] = av[i][j];
+
 		temp[counter] = '\n';
 		counter++;
 	}
