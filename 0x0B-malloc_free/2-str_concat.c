@@ -12,11 +12,16 @@ char *str_concat(char *s1, char *s2)
 	int size_1, size_2, place;
 	char *temp;
 
-	if (s1 != NULL)
+	if (s1 == NULL)
+		s1 = "\0";
+
+	else if (s1 != NULL)
 		for (size_1 = 0; s1[size_1] != '\0'; size_1++)
 			;
+	if (s2 == NULL)
+		s2 = "\0";
 
-	if (s2 != NULL)
+	else if (s2 != NULL)
 		for (size_2 = 0; s2[size_2] != '\0'; size_2++)
 			;
 
