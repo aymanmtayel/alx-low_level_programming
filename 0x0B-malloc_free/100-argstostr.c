@@ -25,8 +25,7 @@ int size(char *argsv)
 char *argstostr(int ac, char **av)
 {
 	char *temp;
-	int i, j, counter = 0;
-	unsigned long int size_of_valus;
+	int i, j, counter = 0, size_of_valus;
 
 	if (ac == 0  || av == NULL)
 		return (NULL);
