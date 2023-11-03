@@ -19,9 +19,9 @@ int *array_range(int min, int max)
 	if (ptr == NULL)
 		return (NULL);
 
-	ptr[0] = min;
-	for (i = 1; i < size; i++)
-		ptr[i] = min + i;
-	ptr[i] = max;
+
+	for (i = 0; i <= size; i++)
+		ptr[i] = min++;
+
 	return (ptr);
 }
