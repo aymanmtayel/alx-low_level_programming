@@ -25,7 +25,7 @@ void print_elf_header(Elf64_Ehdr *elf_h)
 	       (elf_h->e_type == ET_EXEC) ? "EXEC (Executable file)" :
 	       (elf_h->e_type == ET_DYN) ? "DYN (Shared object file)" :
 	       (elf_h->e_type == ET_REL) ? "REL (Relocatable file)" : "Unknown");
-	printf("  Entry:   %lx\n", (unsigned long)elf_h->e_entry);
+	printf("  Entry:   0x%lx\n", (unsigned long)elf_h->e_entry);
 }
 
 /**
