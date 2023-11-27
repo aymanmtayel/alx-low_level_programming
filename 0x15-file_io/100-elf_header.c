@@ -17,25 +17,26 @@ void p_error(const char *msg)
 
 void print_elf_header(Elf64_Ehdr *ehdr)
 {
+	int counter;
 
 	printf("  Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
-		printf("%02x ", elf_header->e_ident[i]);
+	for (counter = 0; counter < EI_NIDENT; counter++)
+		printf("%02x ", ehdr->e_ident[counter]);
 	printf("\n");
 
 	printf("  Class:   %s\n",
-	       (elf_header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
+	       (ehdr->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
 	printf("  Data:    %s\n",
-	       (elf_header->e_ident[EI_DATA] == ELFDATA2LSB) ?
+	       (ehdr->e_ident[EI_DATA] == ELFDATA2LSB) ?
 	       "2's complement, little endian" : "2's complement, big endian");
-	printf("  Version: %d (current)\n", elf_header->e_ident[EI_VERSION]);
-	printf("  OS/ABI:  %d\n", elf_header->e_ident[EI_OSABI]);
-	printf("  ABI Ver: %d\n", elf_header->e_ident[EI_ABIVERSION]);
+	printf("  Version: %d (current)\n", ehdr->e_ident[EI_VERSION]);
+	printf("  OS/ABI:  %d\n", ehdr->e_ident[EI_OSABI]);
+	printf("  ABI Ver: %d\n", ehdr->e_ident[EI_ABIVERSION]);
 	printf("  Type:    %s\n",
-	       (elf_header->e_type == ET_EXEC) ? "EXEC (Executable file)" :
-	       (elf_header->e_type == ET_DYN) ? "DYN (Shared object file)" :
-	       (elf_header->e_type == ET_REL) ? "REL (Relocatable file)" : "Unknown");
-	printf("  Entry:   %lx\n", (unsigned long)elf_header->e_entry);
+	       (ehdr->e_type == ET_EXEC) ? "EXEC (Executable file)" :
+	       (ehdr->e_type == ET_DYN) ? "DYN (Shared object file)" :
+	       (ehdr->e_type == ET_REL) ? "REL (Relocatable file)" : "Unknown");
+	printf("  Entry:   %lx\n", (unsigned long)ehdr->e_entry);
 }
 
 /**
