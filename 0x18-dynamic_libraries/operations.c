@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * add - add two integers
@@ -30,6 +29,18 @@ int sub(int a, int b)
  * Return: their multiplication
  */
 int mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * div - divides two integers
+ * @a: 1st integer
+ * @b: 2nd integer
+ * Return: their division if success otherwise 0
+ */
+
+int div(int a, int b)
 {
 	if (b == 0)
 	{
