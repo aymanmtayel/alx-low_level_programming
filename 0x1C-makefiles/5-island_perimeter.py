@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""Island calculation module"""
 
 def island_perimeter(grid):
     """function that returns the perimeter of the island escribed in grid
     Args:
-            grid (matrix of 0 and 1) represents the grid 0 and 1 
+            grid (matrix of 0 and 1) represents the grid 0 and 1
             where 0 means water and 1 means land
     Returns:
             the premiter of the island
