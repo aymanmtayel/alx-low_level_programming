@@ -23,7 +23,7 @@ void curr_array(int *array, size_t l, size_t r)
 }
 
 /**
- * binary_search - searches for a value in a sorted array of integers
+ * binary_search2 - searches for a value in a sorted array of integers
  * using the Binary search algorithm
  * @array: pointer to the first element of the array to search in
  * @size: the number of elements in array
