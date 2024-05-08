@@ -41,15 +41,10 @@ int advanced_binary_recursive(int *array, int low, int high, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	int low = 0, high = size - 1, i;
+	int low = 0, high = size - 1;
 
 	if (array == NULL || size == 0 || !value)
 		return (-1);
 	printf("Searching in array: ");
-
-	for (i = low; i < high; i++)
-		printf("%d, ", array[i]);
-
-	printf("%d\n", array[high]);
 	return (advanced_binary_recursive(array, low, high, value));
 }
